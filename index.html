@@ -295,21 +295,59 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 700px) {
+    .site { flex-direction: column; }
+
     .sidebar {
       position: static;
       width: 100%;
-      padding: 20px 20px 16px;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: flex-start;
+      padding: 16px 16px 12px;
+      flex-direction: column;
       border-bottom: 1px solid #eee;
     }
-    .site-title { margin-bottom: 0; font-size: 16px; width: 100%; }
-    .nav-section { margin-bottom: 0; }
-    .lang-btn { margin-top: 0; }
-    .main { margin-left: 0; padding: 20px 20px 60px; }
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+    .site-title {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .nav-section {
+      margin-bottom: 12px;
+    }
+
+    .nav-section a {
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .lang-btn {
+      margin-top: 8px;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 20px 16px 60px;
+      width: 100%;
+    }
+
+    .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+    .content-section { margin-bottom: 48px; }
+
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .about-img-wrap .img-placeholder.square {
+      width: 100%;
+    }
+
+    /* lightbox */
+    .lb-inner { width: 96vw; }
+  }
+
+  @media (max-width: 400px) {
+    .grid-4 { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -500,7 +538,7 @@
           <div class="img-placeholder square">PHOTO</div>
         </div>
         <div class="about-text">
-          <p id="bio-1">大学卒業後、映像制作会社にて活動。フリーランスに転向後に映画の撮影助手の経験を経て、現在は国内の美術展覧会のアーカイブや企業のコーポレート映像の撮影をメインに活動中。</p>
+          <p id="bio-1">大学卒業後、映像制作会社にて活動。フリーランスに転向後、映画の撮影助手を経て、現在は国内の美術展覧会のアーカイブ撮影や企業のコーポレート映像制作をメインに活動中。</p>
           <p id="bio-2">東京在住。</p>
         </div>
       </div>
@@ -510,7 +548,7 @@
     <div class="content-section" id="contact">
       <p class="content-section-title" id="t-contact">Contact</p>
       <ul class="contact-list">
-        <li>Email: <a href="mailto:your@email.com">your@email.com</a></li>
+        <li>Email: <a href="mailto:a0i10041995@gmail.com">a0i10041995@gmail.com</a></li>
       </ul>
     </div>
 
@@ -526,7 +564,7 @@
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── LIGHTBOX ──
   const lightbox = document.getElementById('lightbox');
   const lbMedia  = document.getElementById('lb-media');
@@ -570,7 +608,7 @@
       't-about': 'About', 't-contact': 'Contact',
       'n-movie': 'Movie', 'n-photo': 'Photo', 'n-text': 'Text',
       'n-about': 'About', 'n-contact': 'Contact',
-      'bio-1': '大学卒業後、映像制作会社にて活動。フリーランスに転向後に映画の撮影助手の経験を経て、現在は国内の美術展覧会のアーカイブや企業のコーポレート映像の撮影をメインに活動中。',
+      'bio-1': '大学卒業後、映像制作会社にて活動。フリーランスに転向後、映画の撮影助手を経て、現在は国内の美術展覧会のアーカイブ撮影や企業のコーポレート映像制作をメインに活動中。',
       'bio-2': '東京在住。',
     },
     en: {
@@ -579,7 +617,7 @@
       't-about': 'About', 't-contact': 'Contact',
       'n-movie': 'Movie', 'n-photo': 'Photo', 'n-text': 'Text',
       'n-about': 'About', 'n-contact': 'Contact',
-      'bio-1': 'Enter your profile here. After graduating, worked at a creative studio. Has presented exhibitions and publications domestically and internationally.',
+      'bio-1': 'After graduating, worked at a video production company. Following a transition to freelance and experience as a film camera assistant, now specializes in archiving domestic art exhibitions and producing corporate video content.',
       'bio-2': 'Based in Tokyo.',
     }
   };
@@ -599,13 +637,4 @@
 
   window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navLinks.forEach(a => {
-      a.style.fontWeight = a.getAttribute('href') === '#' + current ? '700' : '';
-    });
-  });
-</script>
-</body>
-</html>
+    sections.for
