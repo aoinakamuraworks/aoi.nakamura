@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aoi Nakamura</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -39,10 +39,11 @@
 
   .site-title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
     letter-spacing: -0.01em;
     margin-bottom: 36px;
+    font-family: 'Noto Serif JP', serif;
   }
 
   .nav-section {
@@ -70,11 +71,12 @@
   }
 
   .nav-section.secondary a {
-    color: #aaa;
+    color: #111;
+    font-weight: 700;
   }
 
   .nav-section.secondary a:hover {
-    color: #111;
+    color: #555;
   }
 
   .lang-btn {
@@ -93,27 +95,39 @@
   /* ── MAIN CONTENT ── */
   .main {
     margin-left: 220px;
-    padding: 28px 40px 80px 20px;
+    padding: 40px 60px 80px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* ── SECTION BLOCK ── */
   .content-section {
-    margin-bottom: 72px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 80px;
   }
 
   .content-section-title {
     font-size: 13px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     letter-spacing: 0.02em;
+  }
+
+  .grid-item-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: #111;
+    line-height: 1.6;
   }
 
   /* ── GRID ── */
   .grid {
     display: grid;
-    gap: 20px;
+    gap: 48px 28px;
   }
 
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
@@ -270,8 +284,9 @@
   }
 
   .about-text {
-    font-size: 13px;
-    line-height: 2.1;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.6;
     color: #333;
   }
 
@@ -286,7 +301,8 @@
   /* ── CONTACT ── */
   .contact-list {
     list-style: none;
-    font-size: 13px;
+    font-size: 11px;
+    font-weight: 700;
     line-height: 2.4;
   }
 
@@ -327,9 +343,10 @@
       margin-left: 0;
       padding: 20px 16px 60px;
       width: 100%;
+      align-items: stretch;
     }
 
-    .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 
     .content-section { margin-bottom: 48px; }
 
@@ -538,8 +555,8 @@
           <div class="img-placeholder square">PHOTO</div>
         </div>
         <div class="about-text">
-          <p id="bio-1">大学卒業後、映像制作会社にて活動。フリーランスに転向後、映画の撮影助手を経て、現在は国内の美術展覧会のアーカイブ撮影や企業のコーポレート映像制作をメインに活動中。</p>
-          <p id="bio-2">東京在住。</p>
+          <p id="bio-1">大学卒業後、映像制作会社を経て独立。映画現場での撮影助手としてキャリアを積んだのち、現在は国内の美術展覧会のアーカイブ収録や、企業のコーポレート映像などの撮影に従事。</p>
+          <p id="bio-2">東京都在住。</p>
         </div>
       </div>
     </div>
@@ -547,9 +564,32 @@
     <!-- Contact -->
     <div class="content-section" id="contact">
       <p class="content-section-title" id="t-contact">Contact</p>
+      <p style="font-size:11px; font-weight:700; line-height:1.6; color:#333; margin-bottom:16px;">撮影のご依頼やご相談など、お気軽にお問い合わせくださいませ。</p>
       <ul class="contact-list">
-        <li>Email: <a href="mailto:a0i10041995@gmail.com">a0i10041995@gmail.com</a></li>
+        <li>Email: <a href="/cdn-cgi/l/email-protection#3657065f07060602070f0f0376515b575f5a1855595b"><span class="__cf_email__" data-cfemail="b4d584dd85848480858d8d81f4d3d9d5ddd89ad7dbd9">[email&#160;protected]</span></a></li>
       </ul>
+
+      <form action="https://formspree.io/f/xdalleja" method="POST" style="margin-top:32px; max-width:400px;">
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:11px; font-weight:700; margin-bottom:6px;">お名前</label>
+          <input type="text" name="name" required
+            style="width:100%; font-size:11px; font-family:inherit; padding:8px 0; border:none; border-bottom:1px solid #111; outline:none; background:transparent;">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="display:block; font-size:11px; font-weight:700; margin-bottom:6px;">メールアドレス</label>
+          <input type="email" name="email" required
+            style="width:100%; font-size:11px; font-family:inherit; padding:8px 0; border:none; border-bottom:1px solid #111; outline:none; background:transparent;">
+        </div>
+        <div style="margin-bottom:24px;">
+          <label style="display:block; font-size:11px; font-weight:700; margin-bottom:6px;">お問い合わせ内容</label>
+          <textarea name="message" rows="5" required
+            style="width:100%; font-size:11px; font-family:inherit; padding:8px 0; border:none; border-bottom:1px solid #111; outline:none; background:transparent; resize:none;"></textarea>
+        </div>
+        <button type="submit"
+          style="font-size:11px; font-weight:700; font-family:inherit; background:none; border:none; border-bottom:1px solid #111; padding:4px 0; cursor:pointer; letter-spacing:0.06em;">
+          送信する
+        </button>
+      </form>
     </div>
 
   </main>
@@ -564,7 +604,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── LIGHTBOX ──
   const lightbox = document.getElementById('lightbox');
   const lbMedia  = document.getElementById('lb-media');
@@ -608,8 +648,8 @@
       't-about': 'About', 't-contact': 'Contact',
       'n-movie': 'Movie', 'n-photo': 'Photo', 'n-text': 'Text',
       'n-about': 'About', 'n-contact': 'Contact',
-      'bio-1': '大学卒業後、映像制作会社にて活動。フリーランスに転向後、映画の撮影助手を経て、現在は国内の美術展覧会のアーカイブ撮影や企業のコーポレート映像制作をメインに活動中。',
-      'bio-2': '東京在住。',
+      'bio-1': '大学卒業後、映像制作会社を経て独立。映画現場での撮影助手としてキャリアを積んだのち、現在は国内の美術展覧会のアーカイブ収録や、企業のコーポレート映像などの撮影に従事。',
+      'bio-2': '東京都在住。',
     },
     en: {
       langBtn: 'Ja',
@@ -617,24 +657,5 @@
       't-about': 'About', 't-contact': 'Contact',
       'n-movie': 'Movie', 'n-photo': 'Photo', 'n-text': 'Text',
       'n-about': 'About', 'n-contact': 'Contact',
-      'bio-1': 'After graduating, worked at a video production company. Following a transition to freelance and experience as a film camera assistant, now specializes in archiving domestic art exhibitions and producing corporate video content.',
-      'bio-2': 'Based in Tokyo.',
-    }
-  };
-
-  function toggleLang() {
-    isJa = !isJa;
-    const s = strings[isJa ? 'ja' : 'en'];
-    Object.entries(s).forEach(([id, val]) => {
-      const el = document.getElementById(id);
-      if (el) el.textContent = val;
-    });
-  }
-
-  // Highlight active nav on scroll
-  const sections = document.querySelectorAll('.content-section');
-  const navLinks = document.querySelectorAll('.nav-section a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.for
+      'bio-1': 'After graduating, worked at a video production company before going independent. Following experience as a camera assistant on film sets, now specializes in archiving domestic art exhibitions and shooting corporate video content.',
+      'bio-2': 'Based in Tokyo
